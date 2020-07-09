@@ -22,12 +22,8 @@ def tail(input_list):
     ['Feb', 'Mar']
 
     """
-    without_first_item = []
-    for item in input_list:
-        if item != input_list[0]:
-            without_first_item.append(item)
 
-    return without_first_item
+    return input_list[1:]
 
 
 def last(input_list):
@@ -81,7 +77,7 @@ def last_five(input_list):
 
     """
 
-    return input_list[:-5]
+    return input_list[-5:]
 
 
 def middle(input_list):
@@ -94,7 +90,7 @@ def middle(input_list):
 
     """
 
-    return []
+    return input_list[2:-2]
 
 
 def inner_four(input_list):
@@ -107,7 +103,7 @@ def inner_four(input_list):
 
     """
 
-    return []
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -123,7 +119,7 @@ def inner_four_end(input_list):
 
     """
 
-    return []
+    return input_list[-6:-2]
 
 
 def replace_head(input_list):
@@ -138,7 +134,9 @@ def replace_head(input_list):
 
     """
 
-    pass
+    input_list[0] = 42
+
+    return None
 
 
 def replace_third_and_last(input_list):
@@ -152,8 +150,10 @@ def replace_third_and_last(input_list):
     True
 
     """
+    input_list[2] = 37
+    input_list[-1] = 37
 
-    pass
+    return None
 
 
 def replace_middle(input_list):
@@ -171,8 +171,9 @@ def replace_middle(input_list):
     True
 
     """
+    input_list[2:-2] = 42, 37
 
-    pass
+    return None
 
 
 def delete_third_and_seventh(input_list):
@@ -186,8 +187,10 @@ def delete_third_and_seventh(input_list):
     True
 
     """
+    input_list[2:3] = []
+    input_list[5:6] = []
 
-    pass
+    return None
 
 
 def delete_middle(input_list):
@@ -203,8 +206,8 @@ def delete_middle(input_list):
     True
 
     """
-
-    pass
+    input_list[2:-2]=[]
+    return None
 
 
 # This is the part were we actually run the doctests.
