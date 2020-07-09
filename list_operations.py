@@ -22,12 +22,12 @@ def tail(input_list):
     ['Feb', 'Mar']
 
     """
-    new_list = []
+    without_first_item = []
     for item in input_list:
         if item != input_list[0]:
-            new_list.append(item)
+            without_first_item.append(item)
 
-    return new_list
+    return without_first_item
 
 
 def last(input_list):
@@ -52,8 +52,9 @@ def top(input_list):
     ['Jan', 'Feb']
 
     """
+    input_list.pop()
 
-    return []
+    return input_list
 
 
 def first_three(input_list):
